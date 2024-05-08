@@ -1,0 +1,151 @@
+body {
+    background: #F0FFF0;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+    align-items: flex-start;
+}
+
+.B {
+    display: flex;
+}
+
+img {
+    width: 80px;
+    display: inline-block;
+    margin: 20px auto;
+}
+
+.nav-links,
+.nav-links-right {
+    list-style-type: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px 0 0 20px;
+}
+
+.nav-links-right {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin: 20px 20px 0 0;
+}
+
+.nav-links li,
+.nav-links-right li {
+    margin-right: 10px;
+}
+
+.nav-links a,
+.nav-links-right a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-links-right li a:hover {
+    color: #f39c12;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-menu {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px 0;
+}
+
+.nav-links li:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li .fa-caret-up {
+    display: none;
+}
+
+.nav-links li:hover .fa-caret-down {
+    display: none;
+}
+
+.nav-links li:hover .fa-caret-up {
+    display: inline-block;
+}
+
+.nav-links .icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.C {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.C li {
+    list-style-type: none;
+}
+
+.C a {
+    text-decoration: none;
+    color: black;
+}
+
+.C a:hover {
+    color: #f39c12;
+}
+
+.C a h2 {
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.C a p {
+    font-size: 1.2em;
+}
+
+.C img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.15);
+}
+
+.C a {
+    text-decoration: none;
+    color: black;
+}
+
+.C a:hover {
+    text-decoration: none;
+    color: #f39c12;
+}
+
