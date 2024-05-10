@@ -124,7 +124,6 @@ img {
     background-color: gray;
     justify-content: space-between;
     border-radius: 15px;
-    flex-wrap: wrap;
 }
 
 .home-main a h2 {
