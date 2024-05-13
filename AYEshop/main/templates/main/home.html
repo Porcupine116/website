@@ -38,31 +38,31 @@
     <div class="menu-up">
         <ul class="nav-links">
             <li>
-                <a href="#">ОБУВЬ<i class="fa-solid fa-caret-down"></i><i class="fa-solid fa-caret-up"></i></a>
+                <a href="{% url 'shoes' %}">ОБУВЬ<i class="fa-solid fa-caret-down"></i><i class="fa-solid fa-caret-up"></i></a>
                 <ul class="sub-menu">
-                    <li><a href="#">Мужская обувь</a></li>
-                    <li><a href="#">Женская обувь</a></li>
+                    <li><a href="{% url 'shoes-man' %}">Мужская обувь</a></li>
+                    <li><a href="{% url 'shoes-woman' %}">Женская обувь</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#">ОДЕЖДА<i class="fa-solid fa-caret-down"></i><i class="fa-solid fa-caret-up"></i></a>
+                <a href="{% url 'clothes' %}">ОДЕЖДА<i class="fa-solid fa-caret-down"></i><i class="fa-solid fa-caret-up"></i></a>
                 <ul class="sub-menu">
-                    <li><a href="#">Мужская одежда</a></li>
-                    <li><a href="#">Женская одежда</a></li>
+                    <li><a href="{% url 'clothes-man' %}">Мужская одежда</a></li>
+                    <li><a href="{% url 'clothes-woman' %}">Женская одежда</a></li>
                 </ul>
             </li>
-            <a href="#"><li>АКСЕССУАРЫ</li></a>
-            <a href="#"><li>NEW</li></a>
+            <a href="{% url 'accessories' %}"><li>АКСЕССУАРЫ</li></a>
+            <a href="{% url 'NEW' %}"><li>NEW</li></a>
         </ul>
         <a href="{% url 'home' %}">
             <img src="static/main/img/logo.png" alt="">
         </a>
         <ul class="nav-links-right">
             <a href="{% url 'about' %}"><li>КОНТАКТЫ</li></a>
-            <a href="#"><li>ДОСТАВКА И ОПЛАТА</li></a>
-            <a href=""><li><i class="fa-solid fa-magnifying-glass"></i></li></a>
-            <a href=""><li><i class="fa-regular fa-heart"></i></li></a>
-            <a href="#"><li><i class="fa-solid fa-bag-shopping"></i></li></a>
+            <a href="{% url 'paymant' %}"><li>ДОСТАВКА И ОПЛАТА</li></a>
+            <a href="{% url 'search' %}"><li><i class="fa-solid fa-magnifying-glass"></i></li></a>
+            <a href="{% url 'favorites' %}"><li><i class="fa-regular fa-heart"></i></li></a>
+            <a href="{% url 'purchase' %}"><li><i class="fa-solid fa-bag-shopping"></i></li></a>
         </ul>
     </div>
     <main>

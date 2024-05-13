@@ -10,3 +10,19 @@ def index(request):
 
 def about(request):
     return render(request, 'main/about.html')
+
+
+def purchase(request):
+    return render(request, 'main/about.html')
+
+
+def favorites(request):
+    return render(request, 'main/about.html')
+
+
+def paymant(request):
+    return render(request, 'main/about.html')
+
+
+def search(request):
+    return render(request, 'main/about.html')
