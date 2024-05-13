@@ -54,7 +54,9 @@
             <a href="#"><li>АКСЕССУАРЫ</li></a>
             <a href="#"><li>NEW</li></a>
         </ul>
-        <img src="static/main/img/logo.png" alt="">
+        <a href="{% url 'home' %}">
+            <img href="{% url 'home' %}" src="static/main/img/logo.png" alt="">
+        </a>
         <ul class="nav-links-right">
             <a href="{% url 'about' %}"><li>КОНТАКТЫ</li></a>
             <a href="#"><li>ДОСТАВКА И ОПЛАТА</li></a>
