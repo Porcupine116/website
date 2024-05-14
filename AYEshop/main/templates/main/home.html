@@ -36,12 +36,58 @@
             padding: 10px;
             position: fixed;
             background-color: #F0FFF0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-links-right {
+            display: flex;
+            align-items: center;
+        }
+        .nav-links-right li {
+            margin-left: 20px;
+        }
+        .home-main {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 50px;
+        }
+        .home-main a {
+            text-decoration: none;
+            color: #000;
+        }
+        .home-main a:hover {
+            text-decoration: none;
+            color: #f39c12;
+        }
+        .home-main li {
+            list-style: none;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .icon {
+            width: 200px;
+            height: auto;
+        }
+        .button {
+            background-color: #f39c12;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #e68a00;
         }
     </style>
 </head>
 <body>
     <nav class="menu">
-        <div class="menu-up">
+        <div class="menu-left">
             <ul class="nav-links">
                 <li>
                     <a href="{% url 'shoes' %}">ОБУВЬ<i class="fa-solid fa-caret-down"></i><i class="fa-solid fa-caret-up"></i></a>
@@ -60,17 +106,19 @@
                 <a href="{% url 'accessories' %}"><li>АКСЕССУАРЫ</li></a>
                 <a href="{% url 'NEW' %}"><li>NEW</li></a>
             </ul>
-            <ul>
-                <a href="{% url 'home' %}">
-                    <img src="static/main/img/logo.png" alt="">
-                </a>
-            </ul>
+        </div>
+        <div class="menu-center">
+            <a href="{% url 'home' %}">
+                <img src="static/main/img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="menu-right">
             <ul class="nav-links-right">
-                <a href="{% url 'about' %}"><li>КОНТАКТЫ</li></a>
-                <a href="{% url 'paymant' %}"><li>ДОСТАВКА И ОПЛАТА</li></a>
-                <a href="{% url 'search' %}"><li><i class="fa-solid fa-magnifying-glass"></i></li></a>
-                <a href="{% url 'favorites' %}"><li><i class="fa-regular fa-heart"></i></li></a>
-                <a href="{% url 'purchase' %}"><li><i class="fa-solid fa-bag-shopping"></i></li></a>
+                <li><a href="{% url 'about' %}">КОНТАКТЫ</a></li>
+                <li><a href="{% url 'paymant' %}">ДОСТАВКА И ОПЛАТА</a></li>
+                <li><a href="{% url 'search' %}"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                <li><a href="{% url 'favorites' %}"><i class="fa-regular fa-heart"></i></a></li>
+                <li><a href="{% url 'purchase' %}"><i class="fa-solid fa-bag-shopping"></i></a></li>
             </ul>
         </div>
     </nav>
@@ -83,12 +131,16 @@
                     <p>Купить обувь премиального класса</p>
                     <button class="button">В каталог</button>
                 </a>
+            </li>
+            <li>
                 <a href="#">
                     <img class="icon" src="static/main/Img/clothes.png">
                     <h2>Одежда</h2>
                     <p>У нас все для вашего стиля</p>
                     <button class="button">В каталог</button>
                 </a>
+            </li>
+            <li>
                 <a href="#">
                     <img class="icon" src="static/main/Img/aksesu.png">
                     <h2>Аксессуары</h2>
