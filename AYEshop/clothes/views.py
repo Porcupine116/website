@@ -9,12 +9,12 @@ def clothes_home(request):
 
 def clothes_man(request):
     clothes = Articles.objects.all()
-    return render(request, 'clothes/clothes_home.html', {"clothes": clothes})
+    return render(request, 'clothes/clothes_man.html', {"clothes": clothes})
 
 
 def clothes_woman(request):
     clothes = Articles.objects.all()
-    return render(request, 'clothes/clothes_home.html', {"clothes": clothes})
+    return render(request, 'clothes/clothes_woman.html', {"clothes": clothes})
 
 
 def shoes_man(request):
