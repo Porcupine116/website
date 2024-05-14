@@ -13,7 +13,7 @@ def about(request):
 
 
 def purchase(request):
-    return render(request, 'main/about.html')
+    return render(request, 'main/home.html')
 
 
 def favorites(request):

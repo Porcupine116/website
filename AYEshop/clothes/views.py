@@ -38,5 +38,4 @@ def accessories(request):
 
 
 def new(request):
-    clothes = Articles.object.all()
-    return render(request, 'clothes/clothes_home.html', {"clothes": clothes})
+    return render(request, 'clothes/clothes_home.html')

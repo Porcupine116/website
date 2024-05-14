@@ -167,3 +167,9 @@ img {
 .button:hover {
     background-color: #ffcf87;
 }
+
+.menu {
+    background-color: black;
+    color: black;
+    padding: 10px;
+}
