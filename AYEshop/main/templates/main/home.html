@@ -10,89 +10,18 @@
     <link rel="stylesheet" href="../../static/main/css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
     <style>
-        .nav-links li {
-            position: relative;
-        }
-        .sub-menu {
+        .nav-links li .fa-caret-up {
             display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background-color: #fff;
-            padding: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
         }
-        .nav-links li:hover .sub-menu {
-            display: block;
+
+        .nav-links li:hover .fa-caret-down {
+            display: none;
         }
-        .sub-menu li {
-            margin: 0;
-            padding: 0;
+
+        .nav-links li:hover .fa-caret-up {
+            display: inline-block;
         }
-        .menu {
-            padding: 10px;
-            position: fixed;
-            background-color: #F0FFF0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 50px;
-        }
-        .nav-links-right {
-            display: flex;
-            align-items: center;
-        }
-        .nav-links-right li {
-            margin-left: 20px;
-        }
-        .nav-links li {
-            margin-right: 20px;
-        }
-        .home-main {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            padding: 50px;
-        }
-        .home-main a {
-            text-decoration: none;
-            color: #000;
-        }
-        .home-main a:hover {
-            text-decoration: none;
-            color: #f39c12;
-        }
-        .home-main li {
-            list-style: none;
-            text-align: center;
-            margin-bottom: 50px;
-        }
-        .icon {
-            width: 200px;
-            height: auto;
-        }
-        .button {
-            background-color: #f39c12;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-        .button:hover {
-            background-color: #e68a00;
-        }
-        .nav-links-right li a:hover {
-            color: #f39c12;
-        }
-        .nav-links li a:hover {
-            color: #f39c12;
-        }
+
     </style>
 </head>
 <body>
@@ -100,14 +29,14 @@
         <div class="menu-left">
             <ul class="nav-links">
                 <li>
-                    <a href="{% url 'shoes' %}">ОБУВЬ <i class="fa-solid fa-caret-down"></i><i class="fa-solid fa-caret-up"></i></a>
+                    <a href="{% url 'shoes' %}">ОБУВЬ  <i class="fa-solid fa-caret-down"></i> <i class="fa-solid fa-caret-up"></i></a>
                     <ul class="sub-menu">
                         <li><a href="{% url 'shoes-man' %}">Мужская обувь</a></li>
                         <li><a href="{% url 'shoes-woman' %}">Женская обувь</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="{% url 'clothes' %}">ОДЕЖДА <i class="fa-solid fa-caret-down"></i><i class="fa-solid fa-caret-up"></i></a>
+                    <a href="{% url 'clothes' %}">ОДЕЖДА  <i class="fa-solid fa-caret-down"></i> <i class="fa-solid fa-caret-up"></i></a>
                     <ul class="sub-menu">
                         <li><a href="{% url 'clothes-man' %}">Мужская одежда</a></li>
                         <li><a href="{% url 'clothes-woman' %}">Женская одежда</a></li>
@@ -139,15 +68,15 @@
     <main>
         <div class="home-main">
             <li>
-                <a href="#">
+                <a href="{% url 'shoes' %}">
                     <img class="icon" src="static/main/Img/shoes.png">
                     <h2>Обувь</h2>
-                    <p>Купить обувь премиального класса</p>
+                    <p>Обувь премиального класса</p>
                     <button class="button">В каталог</button>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{% url 'clothes' %}">
                     <img class="icon" src="static/main/Img/clothes.png">
                     <h2>Одежда</h2>
                     <p>У нас все для вашего стиля</p>
@@ -155,10 +84,10 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="{% url 'accessories' %}">
                     <img class="icon" src="static/main/Img/aksesu.png">
                     <h2>Аксессуары</h2>
-                    <p>Подчеркните свой образ у нас</p>
+                    <p>Подчеркните свой образ</p>
                     <button class="button">В каталог</button>
                 </a>
             </li>
