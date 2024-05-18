@@ -39,10 +39,6 @@ body {
     max-height: 70px; /* Увеличиваем размер логотипа */
 }
 
-.fa-solid fa-caret-down {
-
-}
-
 .nav-links, .nav-links-right {
     display: flex;
     align-items: center;
@@ -70,30 +66,39 @@ body {
 }
 
 .sub-menu {
-    display: none;
+    display: block;
     position: absolute;
     top: 100%;
     left: 0;
     background-color: #fff;
-    padding: 10px;
+    padding: 0px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     list-style: none;
     margin: 0;
     z-index: 1000;
+    overflow: hidden;
+    max-height: 0; /* Начальное значение для скрытия */
+    transition: max-height 0.3s ease-in-out; /* Переход для плавного раскрытия */
 }
 
 .nav-links li:hover .sub-menu {
-    display: block;
+    max-height: 200px; /* Достаточно большое значение для размещения содержимого */
 }
 
 .sub-menu li {
-    margin: 0;
-    padding: 0;
+    padding: 5px 10px;
 }
 
 .sub-menu a {
     padding: 5px 10px;
     white-space: nowrap;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sub-menu a:hover {
+    background-color: #f0f0f0;
+    color: #ff0000;
 }
 
 /* Основное меню сайта */
@@ -155,9 +160,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* Стили для кнопки "В каталог" */
-
-
 /* Показываем кнопку при наведении на элемент списка */
 .home-main li:hover .button {
     display: block;
@@ -176,4 +178,30 @@ body {
 .button:hover {
     background-color: #000000;
     color: white;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .menu-left, .menu-right {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    .menu-center {
+        margin: 10px 0;
+    }
+
+    .home-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .home-main li {
+        width: 80%;
+        margin-bottom: 20px;
+    }
 }
