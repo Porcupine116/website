@@ -17,12 +17,12 @@ def purchase(request):
 
 
 def favorites(request):
-    return render(request, 'main/about.html')
+    return render(request, 'main/favorites_home.html')
 
 
 def paymant(request):
-    return render(request, 'main/about.html')
+    return render(request, 'main/paymant_home.html')
 
 
 def search(request):
-    return render(request, 'main/about.html')
+    return render(request)
