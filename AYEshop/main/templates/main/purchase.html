@@ -58,7 +58,7 @@
             <!-- Товары будут добавляться сюда JavaScript-ом -->
         </div>
         <div class="total">
-            Итого: $<span id="total-price">0</span>
+            Итого: <span id="total-price">0</span>₽
         </div>
         <button class="btn btn-primary checkout-btn">Оплатить</button>
     </div>
@@ -76,7 +76,7 @@
             cart.forEach((item, index) => {
                 const div = document.createElement('div');
                 div.classList.add('cart-item');
-                div.innerHTML = `<h2>${item.item}</h2><p> Цена: $${item.price} </p><button class="btn btn-danger remove-btn" data-index="${index}">Удалить</button>`;
+                div.innerHTML = `<h2>${item.item}</h2><p> Цена: ₽${item.price} </p><button class="btn btn-danger remove-btn" data-index="${index}">Удалить</button>`;
                 cartItems.appendChild(div);
                 totalPrice += parseFloat(item.price);
             });
